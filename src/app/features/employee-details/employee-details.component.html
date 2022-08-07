@@ -1,0 +1,80 @@
+<!-- <div>
+  <a (click)="getMoreDetails()">View More.....</a>
+</div> -->
+
+
+
+
+<div class="content-wrapper">
+
+  <div class="content-header">
+  <div class="container-fluid">
+  <div class="row mb-2">
+  <div class="col-sm-6">
+  <h1 class="m-0">Employee Details</h1>
+  </div>
+  <div class="col-sm-6">
+  <ol class="breadcrumb float-sm-right">
+  <li class="breadcrumb-item"><a class="cursor-pointer" [routerLink]="['/cbt/home']">Home</a></li>
+  <li class="breadcrumb-item active">Employee Details</li>
+  </ol>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+  <section class="content">
+  <div class="container-fluid">
+
+  <div class="row">
+    <div class="card main-card">
+      <div class="card-body display-card">
+        <div class="card  details-card">
+          <div class="content" *ngIf="isLoding">
+            <div class="holder">
+              <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+            </div>
+          <div class="content" *ngIf="!isLoding">
+            <div class="imgBox col-4">
+              <img src="{{employeeDetails.company_logo}}" alt="Company">
+            </div>
+            <div class="details col-8">
+              <div>
+                <h3>{{employeeDetails.name}}</h3>
+              </div>
+              <div>
+                <label for="company">Company  <span class="text-color-warning">:</span> </label>
+                <span>{{employeeDetails.company}}</span>
+              </div>
+              <div>
+                <label for="designation">Designation <span class="text-color-warning">:</span> </label>
+                <span>{{employeeDetails.designation}}</span>
+              </div>
+              <div>
+                <label style="display: contents;" for="job_descripton">Job_descripton <span class="text-color-warning">:</span> </label>
+                <span>{{employeeDetails.job_descripton}}</span>
+              </div>
+              <div>
+                <label for="interests">Interests  <span class="text-color-warning">:</span> </label>
+                <span>{{employeeDetails.interests}}</span>
+              </div>
+              <div>
+                <span>{{employeeDetails.rating}}</span>
+              </div>
+              <button
+              (click)="getMoreDetails()"
+              >
+                View more...
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  </div>

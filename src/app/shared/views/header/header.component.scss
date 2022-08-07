@@ -1,0 +1,33 @@
+.main-header{
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 0 !important;
+  border-bottom: 0;
+  background: var(--color-primary);
+  color: var(--color-danger);
+  a{
+    color: var(--color-danger);
+  }
+   .nav-link:focus {
+    color: var(--color-danger);
+}
+.nav-link:hover {
+  color: var(--color-warning);
+}
+  font-size: 1.4rem;
+
+  .toggle-button{
+    margin-left: 5rem;
+  }
+  .brand-logo{
+    color: var(--color-success);
+  }
+}
+.nav-right-item{
+  display: flex;
+  gap: 10px;
+}

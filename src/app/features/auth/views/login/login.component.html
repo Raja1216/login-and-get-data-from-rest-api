@@ -1,0 +1,16 @@
+<div class="login">
+  <div class="form">
+    <h2>Log In</h2>
+    <form
+    [formGroup]="loginForm"
+    (ngSubmit)="attemptLogin()"
+    >
+      <small  class="error-message">{{error}}</small>
+      <input type="email" placeholder="Username" formControlName="user_id">
+      <input type="password" placeholder="Password" formControlName="password">
+      <button class="cursor-pointer" type="submit" value="Log In" class="submit">
+        Log In
+      </button>
+    </form>
+  </div>
+</div>

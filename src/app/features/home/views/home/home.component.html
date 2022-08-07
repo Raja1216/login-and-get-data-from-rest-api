@@ -1,0 +1,63 @@
+
+
+
+
+<div class="content-wrapper">
+
+  <div class="content-header">
+  <div class="container-fluid">
+  <div class="row mb-2">
+  <div class="col-sm-6">
+  <h1 class="m-0">Home</h1>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+  <section class="content">
+  <div class="container-fluid">
+
+  <div class="row">
+    <div class="card main-card">
+
+      <div class="card-body display-card" >
+        <div class="data-tabl" *ngIf="isLoding">
+          <div class="holder">
+            <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          </div>
+          </div>
+            <table class="data-table" *ngIf="!isLoding">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Designation</th>
+                  <th scope="col">Company Logo</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr *ngFor="let empList of employeeList; let i = index" (click)="goToEmployeeDetailsPage(empList.id)" class="cursor-pointer">
+                  <td>{{i + 1}}</td>
+                  <td>{{empList.name != null && empList.name.length > 0
+                    ? empList.name
+                    : "-"}}</td>
+                  <td>{{empList.company != null && empList.company.length > 0
+                    ? empList.company
+                    : "-"}}</td>
+                  <td>{{empList.designation != null && empList.designation.length > 0
+                    ? empList.designation
+                    : "-"}}</td>
+                  <td><img src="{{empList.company_logo}}" alt="logo"></td>
+                </tr>
+
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  </div>
